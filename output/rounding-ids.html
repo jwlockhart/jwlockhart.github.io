@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/perldoc.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="Jeffrey W. Lockhart" />
+<meta name="description" content="Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I&#39;ll explain what the problem is, what some common causes are, and how to fix it. The …" />
+<meta name="keywords" content="numbers, problems">
+
+<meta property="og:site_name" content="Jeff Lockhart's Site"/>
+<meta property="og:title" content="When ID numbers get rounded"/>
+<meta property="og:description" content="Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I&#39;ll explain what the problem is, what some common causes are, and how to fix it. The …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/rounding-ids.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-02-17 20:56:00-05:00"/>
+<meta property="article:modified_time" content="2019-02-17 20:56:00-05:00"/>
+<meta property="article:author" content="/author/jeffrey-w-lockhart.html">
+<meta property="article:section" content="common_problems"/>
+<meta property="article:tag" content="numbers"/>
+<meta property="article:tag" content="problems"/>
+<meta property="og:image" content="/images/face.jpg">
+
+  <title>Jeff Lockhart's Site &ndash; When ID numbers get rounded</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/face.jpg" alt="Jeff Lockhart" title="Jeff Lockhart">
+      </a>
+      <h1><a href="">Jeff Lockhart</a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/about.html#about">About me</a></li>
+          <li><a href="/pages/projects.html#projects">Current projects</a></li>
+
+          <li><a href="/cv.pdf" target="_blank">CV</a></li>
+          <li><a href="/" target="_blank">blog</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/jw_lockhart" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/jwlockhart" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-google" href="https://scholar.google.com/citations?user=ptcuwrcAAAAJ" target="_blank"><i class="fa fa-google"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="rounding-ids">When ID numbers get rounded</h1>
+    <p>
+          Posted on Sun 17 February 2019 in <a href="/category/common_problems.html">common_problems</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I'll explain what the problem is, what some common causes are, and how to fix it. </p>
+<h2>The problem</h2>
+<p>IDs for many data sets can stretch into the quintillions (that's a billion-billions). This happens, for example, in twitter data, where tweets have ID numbers like <a href="https://twitter.com/mc_hankins/status/1095603268586270720">1095603268586270720</a>. Problem is, when we start working with this data, we often see it converted to scientific notation like this: <code>1.0956032685862707e+18</code>.</p>
+<p><strong>What's going on?</strong> Computers have two main ways to store numbers in their memory ("data types"). The first is as an <code>integer</code> or <code>int</code>. This stores any whole number, positive or negative, such as -1, 0, 3, etc. <code>int</code> is an exact data type: its value is exactly what you say. The second way computers store numbers is as a "floating point number" or <code>float</code>. These can hold numbers that are not whole, such as 3.25. Unfotunately, <code>float</code> is not an exact data type: it relies on approximations (just like $1/3$ has to be approximated when we write out $0.33333$). So computers sometimes do strange things. In most programming languages:</p>
+<table class=highlighttable><tbody><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=highlight><pre><span></span><span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> <span class=o>==</span> <span class=mf>0.3</span>
+<span class=bp>False</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>This is due to tiny rounding and approximation errors. In python: </p>
+<table class=highlighttable><tbody><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=highlight><pre><span></span><span class=n>x</span> <span class=o>=</span> <span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> 
+<span class=k>print</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
+<span class=mf>0.30000000000000004</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>This almost never matters, because the approximations are accurate to many more decimal places than we use in everyway work. But when it comes to ID numbers, we need <em>exact</em> matches, so this causes problems. This can be made worse by saving the data. For example:</p>
+<table class=highlighttable><tbody><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class=code><div class=highlight><pre><span></span><span class=n>x</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=mi>1095603268586270720</span><span class=p>)</span>
+<span class=n>y</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=mi>1095603268586270724</span><span class=p>)</span>
+<span class=k>print</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
+<span class=mf>1.0956032685862707e+18</span>
+<span class=k>print</span><span class=p>(</span><span class=n>y</span><span class=p>)</span>
+<span class=mf>1.0956032685862707e+18</span>
+</pre></div>
+</td></tr></tbody></table>
+
+<p>Notice that the version that got printed is missing the last two digits of the ID number, and we can no longer distinguish <code>x</code> and <code>y</code> from one another. Those digits are still in memory, but they're hidden for display purposes. <strong>BUT</strong> if it gets saved to a file like this, those digits are gone forever. Often the rounding when programs save data is more agressive than this.</p>
+<p><strong>Bottom line:</strong> ID numbers are whole numbers and the exact value is extremely important, so they are best storied as <code>int</code>. When they show up with decimal points in them, it is because the computer has decided to store them as <code>float</code> instead.<sup id=sf-rounding-ids-1-back><a href=#sf-rounding-ids-1 class=simple-footnote title="There are many other data types for numbers, but most of them are variations on these two. long is a bigger int, double is a bigger float, and so on.">1</a></sup></p>
+<h2>Common causes</h2>
+<ul>
+<li>Old software<ul>
+<li><strong>Stata</strong>, and software like it, have their origins in the 1980s, when computers had very limited abilities. That resulted in some clever optimizations to make the most of the available resources. One of these optimizations is saving space by storing large numbers as approximations instead of exact values. Unfortunately, <a href="https://stats.idre.ucla.edu/stata/faq/why-am-i-losing-precision-with-large-whole-numbers-such-as-an-id-variable/">Stata still does this in 2019</a>. If Stata is part of your workflow, it might be the culprit. Fortunately, that link also has a workaround. </li>
+<li><strong>Excel</strong> has a habit of doing this too, although for aesthetic rather than practical reasons. Fussing with the number formats is your best bet, if you want to use excel.</li>
+</ul>
+</li>
+<li>Missing values<ul>
+<li><strong>Python</strong> and other modern languages like <strong>R</strong><sup id=sf-rounding-ids-2-back><a href=#sf-rounding-ids-2 class=simple-footnote title="I think there is a related issue for R, but I haven't personally encountered it.">2</a></sup> are perfectly happy to store huge numbers as exact values. Unfortunately, python stores missing values as special cases of <code>float</code> (<code>np.NaN</code>). <code>pandas</code> wants all the values in a column of a data frame to be of the same type. So if one ID is missing, it becomes a <code>float</code>, and the whole column of perfectly happy <code>int</code> values suddenly becomes a column of <code>float</code>s. </li>
+</ul>
+</li>
+<li>Bad input data<ul>
+<li>If the data you're working with were saved with this error, then nothing you do can undo it.<sup id=sf-rounding-ids-3-back><a href=#sf-rounding-ids-3 class=simple-footnote title="I wasted a whole month once trying to salvage mangled data. Abandon all hope, ye who enter here.">3</a></sup> You'll need to go back to a version of the data with full ID numbers and work from there. In order to check how the data are saved, open the input data file in a text editor, or in the terminal peak at the head of the file <code>$ head my_data.csv</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>The simplest fix is to treat ID numbers as <code>string</code> data. Because the computer sees strings as text, it won't try to round them. <ul>
+<li>For many applications, this will work fine.</li>
+<li>This is the solution Twitter uses: it is why all of their IDs come from the API in both number and string format.</li>
+<li>This is also the solution Reddit uses (their ID numbers are written in hexadecimal format, so programs assume they are strings by default). </li>
+<li>Strings are a bit slower for computers to work with, though, and they take up more memory to store. If your data are really big, you might run into issues with this approach. </li>
+</ul>
+</li>
+<li>Make new IDs. If you don't need the original IDs, you can just make a new column of IDs counting up from zero. <ul>
+<li>In python/pandas <code>df.reindex().reset_index()</code></li>
+<li>In py/spark <code>df.withColumn('id', monotonically_increasing_id())</code></li>
+</ul>
+</li>
+<li>Drop rows with missing IDs. <ul>
+<li>In pandas, <code>int</code> columns become <code>float</code> when there are missing values in them. If you don't need the rows that have missing ID numbers, removing them is an easy fix. Then you can convert them back to integers with either <code>df.id_col.astype(int)</code> or <code>pd.to_numeric(df.id_col, downcast='integer')</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Cheers, Y'all. </p>
+<h3>Notes</h3><ol class=simple-footnotes><li id=sf-rounding-ids-1>There are many other data types for numbers, but most of them are variations on these two. <code>long</code> is a bigger <code>int</code>, <code>double</code> is a bigger <code>float</code>, and so on. <a href=#sf-rounding-ids-1-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-2>I think there is a related issue for R, but I haven't personally encountered it. <a href=#sf-rounding-ids-2-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-3>I wasted a whole month once trying to salvage mangled data. Abandon all hope, ye who enter here. <a href=#sf-rounding-ids-3-back class=simple-footnote-back>↩</a></li></ol>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/numbers.html">numbers</a>
+      <a href="/tag/problems.html">problems</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jeff Lockhart's Site ",
+  "url" : "",
+  "image": "/images/face.jpg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

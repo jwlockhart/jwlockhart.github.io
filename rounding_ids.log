@@ -1,0 +1,36 @@
+This is METAFONT, Version 2.7182818 (TeX Live 2018) (preloaded base=mf 2019.2.4)  17 FEB 2019 21:06
+**content/pages/rounding_ids.md content/
+(content/pages/rounding_ids.md
+>> Title
+! Isolated expression.
+<to be read again> 
+                   :
+l.1 Title:
+           When your ID numbers get rounded
+? 
+! Extra tokens will be flushed.
+<to be read again> 
+                   :
+l.1 Title:
+           When your ID numbers get rounded
+? 
+! Interruption.
+l.1 Title:
+           When your ID numbers get rounded
+? 
+! Enormous number has been reduced.
+l.8 ...s have ID numbers like [1095603268586270720
+                                                  ](https://twitter.com/mc_h...
+
+? 
+! Enormous number has been reduced.
+l.8 ...r.com/mc_hankins/status/1095603268586270720
+                                                  ). Problem is, when we sta...
+
+? 
+! Emergency stop.
+l.8 ...r.com/mc_hankins/status/1095603268586270720
+                                                  ). Problem is, when we sta...
+End of file on the terminal!
+
+
