@@ -4,147 +4,147 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/</loc>
-<lastmod>2019-02-18T17:37:48-00:00</lastmod>
+<loc>https://jwlockhart.github.io/</loc>
+<lastmod>2019-02-18T18:22:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2019-02-18T17:37:48-00:00</lastmod>
+<loc>https://jwlockhart.github.io/archives.html</loc>
+<lastmod>2019-02-18T18:22:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tags.html</loc>
-<lastmod>2019-02-18T17:37:48-00:00</lastmod>
+<loc>https://jwlockhart.github.io/tags.html</loc>
+<lastmod>2019-02-18T18:22:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/categories.html</loc>
-<lastmod>2019-02-18T17:37:48-00:00</lastmod>
+<loc>https://jwlockhart.github.io/categories.html</loc>
+<lastmod>2019-02-18T18:22:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pages/about.html</loc>
+<loc>https://jwlockhart.github.io/pages/about.html</loc>
 <lastmod>2019-02-17T18:44:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pages/projects.html</loc>
+<loc>https://jwlockhart.github.io/pages/projects.html</loc>
 <lastmod>2019-02-17T21:44:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/intro-parallelism.html</loc>
+<loc>https://jwlockhart.github.io/intro-parallelism.html</loc>
 <lastmod>2019-02-18T16:06:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/rounding-ids.html</loc>
+<loc>https://jwlockhart.github.io/rounding-ids.html</loc>
 <lastmod>2019-02-17T20:56:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/hello-world.html</loc>
+<loc>https://jwlockhart.github.io/hello-world.html</loc>
 <lastmod>2019-02-17T18:23:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/common_problems.html</loc>
+<loc>https://jwlockhart.github.io/category/common_problems.html</loc>
 <lastmod>2019-02-17T20:56:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/heuristics.html</loc>
+<loc>https://jwlockhart.github.io/category/heuristics.html</loc>
 <lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/uncategorized.html</loc>
+<loc>https://jwlockhart.github.io/category/uncategorized.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/css.html</loc>
+<loc>https://jwlockhart.github.io/tag/css.html</loc>
 <lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/advice.html</loc>
+<loc>https://jwlockhart.github.io/tag/advice.html</loc>
 <lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/parallelism.html</loc>
+<loc>https://jwlockhart.github.io/tag/parallelism.html</loc>
 <lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/numbers.html</loc>
+<loc>https://jwlockhart.github.io/tag/numbers.html</loc>
 <lastmod>2019-02-17T20:56:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/problems.html</loc>
+<loc>https://jwlockhart.github.io/tag/problems.html</loc>
 <lastmod>2019-02-17T20:56:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/tools.html</loc>
+<loc>https://jwlockhart.github.io/tag/tools.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/data.html</loc>
+<loc>https://jwlockhart.github.io/tag/data.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/python.html</loc>
+<loc>https://jwlockhart.github.io/tag/python.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/author/jeffrey-w-lockhart.html</loc>
+<loc>https://jwlockhart.github.io/author/jeffrey-w-lockhart.html</loc>
 <lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

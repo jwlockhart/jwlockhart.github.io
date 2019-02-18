@@ -10,10 +10,10 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/stylesheet/style.min.css">
 
-  <link rel="stylesheet" type="text/css" href="/theme/pygments/perldoc.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/pygments/perldoc.min.css">
+  <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/font-awesome/css/font-awesome.min.css">
 
 
 
@@ -21,7 +21,17 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-63759024-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 
 <meta name="author" content="Jeffrey W. Lockhart" />
 <meta name="description" content="Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I&#39;ll explain what the problem is, what some common causes are, and how to fix it. The …" />
@@ -31,11 +41,11 @@
 <meta property="og:title" content="When ID numbers get rounded"/>
 <meta property="og:description" content="Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I&#39;ll explain what the problem is, what some common causes are, and how to fix it. The …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="/rounding-ids.html"/>
+<meta property="og:url" content="https://jwlockhart.github.io/rounding-ids.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-02-17 20:56:00-05:00"/>
 <meta property="article:modified_time" content="2019-02-17 20:56:00-05:00"/>
-<meta property="article:author" content="/author/jeffrey-w-lockhart.html">
+<meta property="article:author" content="https://jwlockhart.github.io/author/jeffrey-w-lockhart.html">
 <meta property="article:section" content="common_problems"/>
 <meta property="article:tag" content="numbers"/>
 <meta property="article:tag" content="problems"/>
@@ -47,16 +57,16 @@
 <body>
   <aside>
     <div>
-      <a href="">
+      <a href="https://jwlockhart.github.io">
         <img src="/images/face.jpg" alt="Jeff Lockhart" title="Jeff Lockhart">
       </a>
-      <h1><a href="">Jeff Lockhart</a></h1>
+      <h1><a href="https://jwlockhart.github.io">Jeff Lockhart</a></h1>
 
 
       <nav>
         <ul class="list">
-          <li><a href="/pages/about.html#about">About me</a></li>
-          <li><a href="/pages/projects.html#projects">Current projects</a></li>
+          <li><a href="https://jwlockhart.github.io/pages/about.html#about">About me</a></li>
+          <li><a href="https://jwlockhart.github.io/pages/projects.html#projects">Current projects</a></li>
 
           <li><a href="/cv.pdf" target="_blank">CV</a></li>
           <li><a href="/" target="_blank">blog</a></li>
@@ -75,7 +85,7 @@
   <main>
 
     <nav>
-      <a href="">    Home
+      <a href="https://jwlockhart.github.io">    Home
 </a>
 
       <a href="/archives.html">Archives</a>
@@ -90,7 +100,7 @@
       
     <h1 id="rounding-ids">When ID numbers get rounded</h1>
     <p>
-          Posted on Sun 17 February 2019 in <a href="/category/common_problems.html">common_problems</a>
+          Posted on Sun 17 February 2019 in <a href="https://jwlockhart.github.io/category/common_problems.html">common_problems</a>
 
 
     </p>
@@ -101,7 +111,7 @@
     <p>Almost everyone doing computational social science will, at some point, encounter really big ID numbers. When those ID numbers get rounded, it leads to a world of frustration. So in this inaugural post, I'll explain what the problem is, what some common causes are, and how to fix it. </p>
 <h2>The problem</h2>
 <p>IDs for many data sets can stretch into the quintillions (that's a billion-billions). This happens, for example, in twitter data, where tweets have ID numbers like <a href="https://twitter.com/mc_hankins/status/1095603268586270720">1095603268586270720</a>. Problem is, when we start working with this data, we often see it converted to scientific notation like this: <code>1.0956032685862707e+18</code>.</p>
-<p><strong>What's going on?</strong> Computers have two main ways to store numbers in their memory ("data types"). The first is as an <code>integer</code> or <code>int</code>. This stores any whole number, positive or negative, such as -1, 0, 3, etc. <code>int</code> is an exact data type: its value is exactly what you say. The second way computers store numbers is as a "floating point number" or <code>float</code>. These can hold numbers that are not whole, such as 3.25. Unfotunately, <code>float</code> is not an exact data type: it relies on approximations (just like $1/3$ has to be approximated when we write out $0.33333$). So computers sometimes do strange things. In most programming languages:</p>
+<p><strong>What's going on?</strong> Computers have two main ways to store numbers in their memory ("data types"). The first is as an <code>integer</code> or <code>int</code>. This stores any whole number, positive or negative, such as -1, 0, 3, etc. <code>int</code> is an exact data type: its value is exactly what you say. The second way computers store numbers is as a "floating point number" or <code>float</code>. These can hold numbers that are not whole, such as 3.25. Unfotunately, <code>float</code> is not an exact data type: it relies on approximations (just like <span class=math>\(1/3\)</span> has to be approximated when we write out <span class=math>\(0.33333\)</span>). So computers sometimes do strange things. In most programming languages:</p>
 <table class=highlighttable><tbody><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=highlight><pre><span></span><span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.1</span> <span class=o>==</span> <span class=mf>0.3</span>
 <span class=bp>False</span>
@@ -170,12 +180,67 @@
 </li>
 </ul>
 <p>Cheers, Y'all. </p>
-<h3>Notes</h3><ol class=simple-footnotes><li id=sf-rounding-ids-1>There are many other data types for numbers, but most of them are variations on these two. <code>long</code> is a bigger <code>int</code>, <code>double</code> is a bigger <code>float</code>, and so on. <a href=#sf-rounding-ids-1-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-2>I think there is a related issue for R, but I haven't personally encountered it. <a href=#sf-rounding-ids-2-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-3>I wasted a whole month once trying to salvage mangled data. Abandon all hope, ye who enter here. <a href=#sf-rounding-ids-3-back class=simple-footnote-back>↩</a></li></ol>
+<h3>Notes</h3>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><ol class=simple-footnotes><li id=sf-rounding-ids-1>There are many other data types for numbers, but most of them are variations on these two. <code>long</code> is a bigger <code>int</code>, <code>double</code> is a bigger <code>float</code>, and so on. <a href=#sf-rounding-ids-1-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-2>I think there is a related issue for R, but I haven't personally encountered it. <a href=#sf-rounding-ids-2-back class=simple-footnote-back>↩</a></li><li id=sf-rounding-ids-3>I wasted a whole month once trying to salvage mangled data. Abandon all hope, ye who enter here. <a href=#sf-rounding-ids-3-back class=simple-footnote-back>↩</a></li></ol>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="/tag/numbers.html">numbers</a>
-      <a href="/tag/problems.html">problems</a>
+      <a href="https://jwlockhart.github.io/tag/numbers.html">numbers</a>
+      <a href="https://jwlockhart.github.io/tag/problems.html">problems</a>
     </p>
   </div>
 
@@ -199,7 +264,7 @@
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " Jeff Lockhart's Site ",
-  "url" : "",
+  "url" : "https://jwlockhart.github.io",
   "image": "/images/face.jpg",
   "description": ""
 }
