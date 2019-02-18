@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-02-17T23:48:59-00:00</lastmod>
+<lastmod>2019-02-18T17:37:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-02-17T23:48:59-00:00</lastmod>
+<lastmod>2019-02-18T17:37:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-02-17T23:48:59-00:00</lastmod>
+<lastmod>2019-02-18T17:37:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-02-17T23:48:59-00:00</lastmod>
+<lastmod>2019-02-18T17:37:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/pages/projects.html</loc>
 <lastmod>2019-02-17T21:44:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/intro-parallelism.html</loc>
+<lastmod>2019-02-18T16:06:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -67,8 +74,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/heuristics.html</loc>
+<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/category/uncategorized.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/css.html</loc>
+<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/advice.html</loc>
+<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/parallelism.html</loc>
+<lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -95,13 +130,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/css.html</loc>
-<lastmod>2019-02-17T18:23:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/tag/data.html</loc>
 <lastmod>2019-02-17T18:23:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -117,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/jeffrey-w-lockhart.html</loc>
-<lastmod>2019-02-17T20:56:00-04:56</lastmod>
+<lastmod>2019-02-18T16:06:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
