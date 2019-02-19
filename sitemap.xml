@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jwlockhart.github.io/</loc>
-<lastmod>2019-02-18T18:22:45-00:00</lastmod>
+<lastmod>2019-02-18T19:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jwlockhart.github.io/archives.html</loc>
-<lastmod>2019-02-18T18:22:45-00:00</lastmod>
+<lastmod>2019-02-18T19:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jwlockhart.github.io/tags.html</loc>
-<lastmod>2019-02-18T18:22:45-00:00</lastmod>
+<lastmod>2019-02-18T19:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jwlockhart.github.io/categories.html</loc>
-<lastmod>2019-02-18T18:22:45-00:00</lastmod>
+<lastmod>2019-02-18T19:28:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://jwlockhart.github.io/pages/projects.html</loc>
 <lastmod>2019-02-17T21:44:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://jwlockhart.github.io/um-css-1.html</loc>
+<lastmod>2019-02-18T18:47:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -75,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jwlockhart.github.io/category/heuristics.html</loc>
-<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<lastmod>2019-02-18T18:47:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -89,7 +96,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jwlockhart.github.io/tag/css.html</loc>
-<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<lastmod>2019-02-18T18:47:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://jwlockhart.github.io/tag/curriculum.html</loc>
+<lastmod>2019-02-18T18:47:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://jwlockhart.github.io/tag/teaching.html</loc>
+<lastmod>2019-02-18T18:47:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -145,7 +166,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jwlockhart.github.io/author/jeffrey-w-lockhart.html</loc>
-<lastmod>2019-02-18T16:06:00-04:56</lastmod>
+<lastmod>2019-02-18T18:47:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
