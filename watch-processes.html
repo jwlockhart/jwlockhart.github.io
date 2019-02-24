@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/pygments/perldoc.min.css">
+  <link rel="stylesheet" type="text/css" href="https://jwlockhart.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63759024-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Jeffrey W. Lockhart" />
+<meta name="description" content="Every computer has at least one program for monitoring resource use, and they&#39;re increadibly helpful for doing CSS work. I keep one open any time I&#39;m working, and I think you should, too. These tools go by namy names: &#34;system monitor,&#34; &#34;activity monitor,&#34; &#34;resource monitor,&#34; &#34;top,&#34; &#34;htop&#34;... All of these …" />
+<meta name="keywords" content="tips, CSS">
+
+<meta property="og:site_name" content="Jeff Lockhart"/>
+<meta property="og:title" content="Always watch your processes!"/>
+<meta property="og:description" content="Every computer has at least one program for monitoring resource use, and they&#39;re increadibly helpful for doing CSS work. I keep one open any time I&#39;m working, and I think you should, too. These tools go by namy names: &#34;system monitor,&#34; &#34;activity monitor,&#34; &#34;resource monitor,&#34; &#34;top,&#34; &#34;htop&#34;... All of these …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://jwlockhart.github.io/watch-processes.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-02-24 17:13:00-05:00"/>
+<meta property="article:modified_time" content="2019-02-24 17:13:00-05:00"/>
+<meta property="article:author" content="https://jwlockhart.github.io/author/jeffrey-w-lockhart.html">
+<meta property="article:section" content="tips"/>
+<meta property="article:tag" content="tips"/>
+<meta property="article:tag" content="CSS"/>
+<meta property="og:image" content="/images/face.jpg">
+
+  <title>Jeff Lockhart &ndash; Always watch your processes!</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://jwlockhart.github.io">
+        <img src="/images/face.jpg" alt="Jeff Lockhart" title="Jeff Lockhart">
+      </a>
+      <h1><a href="https://jwlockhart.github.io">Jeff Lockhart</a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="https://jwlockhart.github.io/pages/about.html#about">About me</a></li>
+          <li><a href="https://jwlockhart.github.io/pages/projects.html#projects">Current projects</a></li>
+
+          <li><a href="http://www-personal.umich.edu/~jwlock/cv.pdf" target="_blank">CV</a></li>
+          <li><a href="/" target="_blank">blog</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/jw_lockhart" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/jwlockhart" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-google" href="https://scholar.google.com/citations?user=ptcuwrcAAAAJ" target="_blank"><i class="fa fa-google"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://jwlockhart.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="watch-processes">Always watch your processes!</h1>
+    <p>
+          Posted on Sun 24 February 2019 in <a href="https://jwlockhart.github.io/category/tips.html">tips</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Every computer has at least one program for monitoring resource use, and they're increadibly helpful for doing CSS work. I keep one open any time I'm working, and I think you should, too. </p>
+<p>These tools go by namy names: "system monitor," "activity monitor," "resource monitor," "top," "htop"... All of these tools do the same thing: they show you what processes are running on a computer, along with how much CPU (processor) and RAM (memory) they are using (among other things). They're super useful for catching and understanding problems with our code. Here are some examples:</p>
+<ul>
+<li>If you ran some code but don't have results yet, you can see if your code is using CPU (thinking/processing/crunching numbers). <ul>
+<li>If it is using 100% of a processor, then it just needs more time to do its calculations.</li>
+<li>If it is using less than 100% of a CPU, it is probably "bottlenecked" or limited by something else. Processors are the fastest parts of a computer, so they often have to wait on slower parts like your hard drive or internet connection to get the data they will process. Seeing resource use helps you know <em>why</em> code is sometimes slow. </li>
+<li>If it is not using any CPU, then something is probably wrong. </li>
+</ul>
+</li>
+<li>If you wrote code that you wanted to run in parallel, you can easily see whether it is actually running in parallel by seeing if it is using multiple CPUs.</li>
+<li>If you get memory-related errors, watching the system monitor can tell you if your code is using up a lot of memory, or if some other program is hogging the memory you need. </li>
+<li>Even when you don't get memory errors, seeing how much memory your code uses can give you a sense of whether it is possible to handle more data or run the same code on smaller computers. </li>
+<li>It can also warn you before memory errors happen: if you see memory usage creeping up to your system's maximum, you can take action so that you do not run out of memory.</li>
+<li>Many system monitors also show network use, which can be very helpful to know when web scraping or using APIs. </li>
+</ul>
+<p><strong>This is all well and good, but what if I'm in the terminal?</strong> This happens often, especially when we log into remote servers to do our work. Never fear: in the terminal, you can use the command <code>top</code> to see the same information, in all of its black-and-white-text glory. <code>top</code> is a bit ugly, though, so I prefer <code>htop</code>. It has more information, usage bars, and color-coding, so if you have it or can install it, it's definitely a better tool.</p>
+<p>So next time you're working with CSS tools, open up a system monitor before you start and glance at it occasionally as you work. You might just catch a problem before it happens!</p>
+<h2>Notes</h2>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://jwlockhart.github.io/tag/tips.html">tips</a>
+      <a href="https://jwlockhart.github.io/tag/css.html">CSS</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jeff Lockhart ",
+  "url" : "https://jwlockhart.github.io",
+  "image": "/images/face.jpg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
