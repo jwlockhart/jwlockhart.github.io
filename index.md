@@ -31,4 +31,5 @@ Before coming to Berkeley, Lockhart was a James S. McDonnell Postdoctoral Fellow
 [Google Scholar](https://scholar.google.com/citations?user=ptcuwrcAAAAJ&hl=en&oi=ao)  
 ORCiD: [0000-0003-1519-9588](https://orcid.org/0000-0003-1519-9588)  
 ResearcherID: [A-2956-2019](http://www.researcherid.com/rid/A-2956-2019)  
+Berkeley [faculty page](https://sociology.berkeley.edu/faculty/jeffrey-w-lockhart)  
 [bsky](https://bsky.app/profile/jwlockhart.bsky.social) []()  
