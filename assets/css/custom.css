@@ -14,6 +14,12 @@
     border-radius: 4px;
 }
 
+div.publications p {
+    padding-left: 2em !important;
+    text-indent: -2em !important;
+    margin-bottom: 0.75rem;
+}
+
 /* force light theme by overriding Simple.css dark mode variables */
 @media (prefers-color-scheme: dark) {
     :root {
