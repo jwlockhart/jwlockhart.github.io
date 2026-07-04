@@ -1,0 +1,32 @@
+:root {
+    --accent: #2a4a7f;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* force light theme by overriding Simple.css dark mode variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #fff;
+        --accent-bg: #f5f7ff;
+        --text: #212121;
+        --text-light: #585858;
+        --border: #898EA4;
+        --accent: #0d47a1;
+        --accent-light: #90caf9;
+        --code: #d81b60;
+        --preformatted: #444;
+        --marked: #ffdd33;
+        --disabled: #efefef;
+    }
+}
