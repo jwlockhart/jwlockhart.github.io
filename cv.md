@@ -7,21 +7,16 @@ title: CV
 
 [Download PDF](/assets/cv.pdf)
 
-## Positions
+### Positions
 
-**Assistant Professor** &mdash; University of California, Berkeley, 2025&ndash;present
+**Assistant Professor** &mdash; University of California, Berkeley, 2025&ndash;present  
+**James S. McDonnell Fellow** &mdash; University of Chicago, 2022&ndash;2025  
 
-**James S. McDonnell Fellow** &mdash; University of Chicago, 2022&ndash;2025
+### Education
 
-## Education
-
-**PhD, Sociology** &mdash; University of Michigan, 2022
-
-**MA, Sociology** &mdash; University of Michigan, 2017
-
-**MPhil, Multi-Disciplinary Gender Studies** &mdash; University of Cambridge, 2015
-
-**MS, Computer Science** &mdash; Fordham University, 2014
-
-**BS, Computer Science & Women's Studies** &mdash; Fordham University, 2013
+**Ph.D., Sociology** &mdash; University of Michigan, 2022  
+**M.A., Sociology** &mdash; University of Michigan, 2017  
+**M.Phil., Multi-Disciplinary Gender Studies** &mdash; University of Cambridge, 2015  
+**M.S., Computer Science** &mdash; Fordham University, 2014  
+**B.S., Computer Science & Women's Studies** &mdash; Fordham University, 2013  
 
