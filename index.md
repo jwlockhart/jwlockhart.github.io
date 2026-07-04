@@ -9,9 +9,9 @@ title: About
     </div>
     <div>
         <h2>Jeffrey W. Lokchart</h2>
-        <p>Assistant Professor</p>
-        <p>Department of Sociology</p>
-        <p>University of California, Berkeley</p>
+        Assistant Professor<br>
+        Department of Sociology<br>
+        University of California, Berkeley  
     </div>
 </div>
 
