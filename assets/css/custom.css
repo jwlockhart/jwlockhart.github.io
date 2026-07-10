@@ -36,3 +36,13 @@ div.publications p {
         --disabled: #efefef;
     }
 }
+
+img {
+    filter: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    img, video {
+        opacity: 1;
+    }
+}
