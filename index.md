@@ -5,7 +5,7 @@ title: About
 
 <div class="profile">
     <div>
-        <img src="/assets/images/photo.jpg" alt="Jeffrey W. Lockhart">
+        <img src="/assets/images/photo-tx.jpg" alt="Jeffrey W. Lockhart">
     </div>
     <div>
         <h2>Jeffrey W. Lockhart</h2>
