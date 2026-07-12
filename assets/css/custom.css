@@ -46,3 +46,9 @@ img {
         opacity: 1;
     }
 }
+
+.photo-credit {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.25rem;
+}

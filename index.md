@@ -6,6 +6,7 @@ title: About
 <div class="profile">
     <div>
         <img src="/assets/images/photo-tx.jpg" alt="Jeffrey W. Lockhart">
+        <p class="photo-credit">Photo by <a href="http://www.ericmorales.com">Eric Morales</a></p>
     </div>
     <div>
         <h2>Jeffrey W. Lockhart</h2>
