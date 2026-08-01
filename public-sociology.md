@@ -27,6 +27,8 @@ title: Public Sociology
 ### Blogs 
 <div class="publications" markdown="1">
 
+[science funding and the cherry picking problem](https://scatter.wordpress.com/2026/07/31/science-funding-and-the-cherry-picking-problem/). 31 July, 2026. *scatterplot*.
+
 [it's the interface](https://scatter.wordpress.com/2025/04/27/its-the-interface/). 27 April, 2025. *scatterplot*.  
 
 [sex as a social construct](https://scatter.wordpress.com/2022/01/30/sex-as-a-social-construct/). 30 January, 2022. *scatterplot*.  
