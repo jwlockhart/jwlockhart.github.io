@@ -16,15 +16,15 @@ Biliotti, C., Riccaboni, M., Lockhart, J. W., Evans, J. A. (2026). "[The Innovat
 ### Forthcoming
 <div class="publications" markdown="1">
 
-Lee, Edward D., *et al.* (Forthcoming). "Synthesis of innovation and obsolescence." *Journal of the Royal Society Interface*. 0(0), 0-0. [Preprint](http://arxiv.org/abs/2505.05182)".
+Lee, Edward D., *et al.* (Forthcoming). "Synthesis of innovation and obsolescence." *Journal of the Royal Society Interface*. *0*(0), 0--0. [Preprint](http://arxiv.org/abs/2505.05182)".
 </div>
 
 ### 2026
 <div class="publications" markdown="1">
 
-King, Molly M., Lockhart, Jeffrey W. (2026). "[Sharing Knowledge Openly: Author Gender, Race/Ethnicity, & Feminist Science](https://doi.org/10.1177/08912432261453086)". *Gender & Society*. 40(4), 508–534. [Preprint](https://osf.io/preprints/socarxiv/a2d86)
+King, Molly M., Lockhart, Jeffrey W. (2026). "[Sharing Knowledge Openly: Author Gender, Race/Ethnicity, & Feminist Science](https://doi.org/10.1177/08912432261453086)". *Gender & Society*. *40*(4), 508--534. [Preprint](https://osf.io/preprints/socarxiv/a2d86)
 
-Kleinherenbrink, Annelies, Radhika Radhakrishnan, Marion Boulicault, Maggie Delano, Jeffrey W. Lockhart, Madeleine Pape, Ula N. Ratajec. (2026). "[Beyond the hype of AI as a panacea for women's health](https://www.nature.com/articles/s44294-026-00154-7)". *npj Women’s Health* . 0(0), 1-11.
+Kleinherenbrink, Annelies, Radhika Radhakrishnan, Marion Boulicault, Maggie Delano, Jeffrey W. Lockhart, Madeleine Pape, Ula N. Ratajec. (2026). "[Beyond the hype of AI as a panacea for women's health](https://www.nature.com/articles/s44294-026-00154-7)". *npj Women’s Health* . *0*(0), 1--11.
 
 </div>
 
